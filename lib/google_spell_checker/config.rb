@@ -13,7 +13,6 @@ module GoogleSpellChecker
   class Configuration
     include ActiveSupport::Configurable 
     config_accessor :using_hk
-    config.using_hk = false
   end
 
   def param_name
@@ -24,4 +23,8 @@ module GoogleSpellChecker
   writer, line = 'def param_name=(value); config.param_name = value; end', __LINE__
   singleton_class.class_eval writer, __FILE__, line
   class_eval writer, __FILE__, line
+
+  configure do |config|
+    config.using_hk = false
+  end
 end
