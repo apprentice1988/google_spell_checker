@@ -9,7 +9,7 @@ This gem is using google to check word's spelling.
 ###Installation
 
 ```
-gem 'google_spell_checker','0.1.0'
+gem 'google_spell_checker','0.2.0'
 ```
 
 and run the `bundle` command.
